@@ -1,0 +1,28 @@
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 100px;
+  animation: fadeIn 750ms;
+}
+
+.site-footer--narrow {
+  max-width: 640px;
+  margin: 100px auto 0px auto;
+}
+
+.site-footer__copyright {
+  font-size: 0.8em;
+  line-height: 1.8em;
+  text-align: right;
+  margin-bottom: -5px;
+  transition: 250ms;
+}
+
+@media screen and (max-width: 680px) {
+  .site-footer__copyright {
+    text-align: left;
+    margin-top: 40px;
+  }
+}

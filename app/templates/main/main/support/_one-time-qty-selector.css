@@ -1,0 +1,47 @@
+.support__one-time__qty-selector {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.support__one-time__qty-remove,
+.support__one-time__qty-add {
+  border: none;
+  font-weight: 700;
+  color: var(--text);
+  background: none;
+  font-size: 1.5em;
+}
+
+.support__one-time__qty-remove:hover,
+.support__one-time__qty-add:hover {
+  background: var(--lightGray);
+}
+
+.support__one-time__qty-remove:focus,
+.support__one-time__qty-add:focus {
+  background: none;
+}
+
+.support__one-time__qty-remove:active,
+.support__one-time__qty-add:active {
+  background: var(--highlight);
+}
+
+.support__one-time__qty-input {
+  -moz-appearance: textfield;
+  color: var(--text);
+  text-align: center;
+  font-size: 1.5em;
+  width: 60px;
+}
+
+.support__one-time__qty-input::-webkit-outer-spin-button,
+.support__one-time__qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.support__one-time__coffee {
+  font-size: 1.5em;
+  margin-left: 10px;
+}

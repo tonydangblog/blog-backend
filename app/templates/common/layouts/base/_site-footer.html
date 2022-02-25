@@ -1,0 +1,13 @@
+<footer class="site-footer {{ site_footer_modifier }}">
+  {% include 'common/components/_subscription-form.html' %}
+
+  <p class="site-footer__copyright">
+    &copy; <span class="site-footer__copyright-year"></span>
+    <a href="{{ url_for('main.home') }}">Tony Dang</a>
+    {% if not current_user.is_authenticated %} |
+    <a href="{{ url_for('auth.login') }}">Login</a>
+    {% endif %}
+    <br />
+    Built with bits of SQL, Python, and JS.
+  </p>
+</footer>

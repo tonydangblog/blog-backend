@@ -1,0 +1,35 @@
+{% block jinja %}{% endblock jinja %}
+
+<header class="site-header">
+  {% set hamburger_button_mixes = 'site-header__hamburger-button' %}
+  {% include 'common/components/_hamburger-button.html' %}
+
+  <a class="site-header__logo" href="{{ url_for('main.home') }}">TD</a>
+
+  <nav class="site-header__navigation">
+    <ul class="site-header__endpoints">
+      {% for endpoint in navigation_endpoints %}
+        <li class="site-header__endpoint">
+          <a class="a--hover-line" href="{{ url_for(endpoint[0]) }}">
+            {{ endpoint[1] }}
+          </a>
+        </li>
+      {% endfor %}
+      {% if current_user.is_authenticated %}
+        |
+        {% for endpoint in authenticated_endpoints %}
+          <li class="site-header__endpoint">
+            <a class="a--hover-line" href="{{ url_for(endpoint[0]) }}">
+              {{ endpoint[1] }}
+            </a>
+          </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </nav>
+
+  <div class="site-header__dark-mode-toggle">
+    {% set toggle_id = 'dark-mode-toggle' %}
+    {% include 'common/components/_toggle.html' %}
+  </div>
+</header>

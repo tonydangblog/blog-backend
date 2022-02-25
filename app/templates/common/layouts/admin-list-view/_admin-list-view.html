@@ -1,0 +1,9 @@
+{% extends 'common/layouts/base/_base.html' %}
+
+{% block main %}
+  <h1>{{ page['title'] }} ({{ count }})</h1>
+  {% block pre_table_content %}{% endblock pre_table_content %}
+  {% include 'common/layouts/admin-list-view/_filters.html' %}
+  <p>{{ stmt }}</p>
+  {% include 'common/layouts/admin-list-view/_table.html' %}
+{% endblock main %}

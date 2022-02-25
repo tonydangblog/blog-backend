@@ -1,0 +1,17 @@
+.whoops {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.whoops--hidden {
+  display: none;
+}
+
+.whoops__emoticon {
+  font-family: Roboto, sans-serif;
+  font-size: 90px;
+}
+
+.whoops__message {
+  font-size: 1.1em;
+}

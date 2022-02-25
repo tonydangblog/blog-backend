@@ -1,0 +1,11 @@
+.relay-results__trends-chart__circle {
+  stroke: var(--bg);
+}
+
+.relay-results__trends-chart__circle:hover {
+  fill: var(--highlight);
+}
+
+.relay-results__trends-chart__tooltip-bg {
+  fill: var(--highlight);
+}

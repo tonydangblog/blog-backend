@@ -1,0 +1,12 @@
+.relay-results__results-chart__odd-runner {
+  fill: var(--blue);
+}
+
+.relay-results__results-chart__even-runner {
+  fill: var(--lightBlue);
+}
+
+.relay-results__results-chart__odd-runner:hover,
+.relay-results__results-chart__even-runner:hover {
+  fill: var(--highlight);
+}

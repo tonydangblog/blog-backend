@@ -1,0 +1,61 @@
+.ipynb_checkpoints/
+.scrapy/
+
+# Directories
+dist/
+logs/
+node_modules/
+sandbox/
+src/**/*.js
+
+# Configs
+.bundlerc
+.env
+.eslintrc.js
+.flake8
+.isort.cfg
+.prettierrc
+babel.config.js
+jest.config.ts
+rsync-exclude
+
+# CSV
+*-*.csv
+
+# Docker
+docker-compose-prod.yml
+
+# Mac
+.DS_Store
+
+# Markdown compiled
+*.md.html
+
+# Mypy
+.mypy_cache/
+mypy.ini
+
+# Pytest, Jest & Coverage
+coverage/
+htmlcov/
+.coverage
+.coveragerc
+pytest.ini
+
+# Python
+__pycache__/
+*.egg-info/
+*.pyc
+
+# SQLite
+db.sqlite3
+
+# tox
+.tox/
+tox.ini
+
+# typescript
+tsconfig.json
+
+# Virtual Environments
+.venv

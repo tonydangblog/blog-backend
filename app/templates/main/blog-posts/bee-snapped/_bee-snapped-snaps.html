@@ -1,0 +1,57 @@
+{% block jinja %}{% endblock jinja %}
+
+{% set names = [
+  'nish',
+  'tram',
+  'henry',
+  'henry',
+  'cheryl',
+  'chris',
+  'huy',
+  'david',
+  'nupur',
+  'bhushan',
+  'jennifer',
+  'geoff',
+  'haebin',
+  'lilly',
+  'jose',
+  'alec',
+  'joyce',
+  'kevin',
+  'michelle',
+  'daoie',
+  'jasmine',
+  'hing',
+  'jessica',
+  'ryan',
+  'tung',
+  'tam',
+  'sumukh',
+  'maddy',
+  'christian',
+  'atreya',
+  'khang',
+  'angelo',
+  'bruno',
+  'emma',
+  'thai',
+  'henry',
+  'catherine',
+  'andrew',
+] %}
+
+<div id="bee-snapped-snaps" class="bee-snapped-snaps">
+  <h2>Snaps from previous shoots—</h2>
+  {% for name in names %}
+    {% if loop.index < 10 %}
+      {% set zero = '00' %}
+    {% else %}
+      {% set zero = '0' %}
+    {% endif %}
+    {% set path = 'img/bee-snapped/_' + zero + loop.index | string + '-' + name %}
+    <a href="{{ static_file(path + '-1280px.jpg') }}">
+      <img src="{{ static_file(path + '-640px.jpg') }}" alt="Bee Snapped—{{ name }}" />
+    </a>
+  {% endfor %}
+</div>

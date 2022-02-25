@@ -1,0 +1,15 @@
+{% block jinja %}{% endblock jinja %}
+
+<form id="relay-results__date-selection">
+  <label for="relay-results__date-selector">Select a date:</label><br />
+  <select id="relay-results__date-selector" autocomplete="off">
+    {% for event in data['relay_events'] %}
+      <option
+        value="{{ event["run_date"].strftime("%Y-%m-%d") }}"
+        {% if loop.index == 1 %} id="relay-results__latest-event" selected {% endif %}
+      >
+        {{ event["run_date"].strftime("%Y-%m-%d") }} - {{ event['relay_run_location'] }}
+      </option>
+    {% endfor %}
+  </select>
+</form>

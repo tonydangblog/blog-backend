@@ -1,0 +1,8 @@
+.mailer__mail-form select {
+  width: 275px;
+  padding: 10px 6px;
+}
+
+.mailer__mail-form input {
+  width: 255px;
+}

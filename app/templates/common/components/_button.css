@@ -1,0 +1,42 @@
+button {
+  position: relative;
+  cursor: pointer;
+  border: 0.99px solid var(--heading);
+  font-family: Roboto, sans-serif;
+  font-size: 0.9em;
+  padding: 10px;
+  background: var(--heading);
+  color: var(--bg);
+  transition: 250ms;
+}
+
+.button--center {
+  display: block;
+  margin: 0 auto;
+}
+
+.button--disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.button--disabled:focus {
+  background: var(--heading);
+  color: var(--bg);
+}
+
+button:hover {
+  background: var(--bg);
+  color: var(--heading);
+}
+
+.button--disabled:hover {
+  background: var(--heading);
+  color: var(--bg);
+}
+
+.button__spinner {
+  position: absolute;
+  right: -25px;
+  display: none;
+}

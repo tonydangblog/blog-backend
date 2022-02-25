@@ -1,0 +1,6 @@
+<form method="POST" action="{{ url_for('admin.' + action) }}">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  <input type="hidden" name="next_url" value="{{ request.full_path }}" />
+  <input type="hidden" name="uuid" value="{{ row[primary_key] }}" />
+  <button>{{ action }}</button>
+</form>

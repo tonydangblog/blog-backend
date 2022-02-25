@@ -1,0 +1,13 @@
+{% extends 'common/layouts/base/_base.html' %}
+
+{% block main %}
+  <script src="{{ static_file('dist/js/support.bundle.js') }}" type="module"></script>
+  {% include 'common/components/_profile-img.html' %}
+  <h1 class="h--center">Buy Me A Coffee?</h1>
+  <p>If you found my posts helpful or would like to support this blog, how about buying
+  me a coffee? :)</p>
+  {% include 'main/main/support/_one-time-qty-selector.html' %}
+  {% include 'main/main/support/_one-time-checkout-button.html' %}
+  {% include 'common/components/_divider.html' %}
+  {% include 'main/main/support/_feed.html' %}
+{% endblock main %}

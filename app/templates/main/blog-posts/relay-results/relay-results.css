@@ -1,0 +1,9 @@
+.relay-results__text {
+  fill: var(--text);
+  font-size: 1em;
+}
+
+.relay-results__small-text {
+  fill: var(--text);
+  font-size: 0.8em;
+}

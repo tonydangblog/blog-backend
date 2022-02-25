@@ -1,0 +1,16 @@
+{% block jinja %}{% endblock jinja %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="flash-messages">
+      {% for category, message in messages %}
+        <div class="flash-messages__message {{ category }}">
+          <p class="flash-messages__text">{{ message }}</p>
+          <div class="flash-messages__dismiss-button" title="Dismiss message.">
+            &times;
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}

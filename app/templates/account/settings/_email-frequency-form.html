@@ -1,0 +1,45 @@
+{% block jinja %}{% endblock jinja %}
+
+<form id="settings__email-frequency-form" autocomplete="off">
+  <h2>Email frequency.</h2>
+  <p>Change how frequently you would like to see emails from me.</p>
+
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+  <div class="radio">
+  <input type="radio" id="settings__sometimes" name="mailing_list" value="1"
+    {% if current_user.is_subscriber and current_user.mailing_list_id == 1 %}
+      checked
+    {% endif %}
+  />
+  <label for="settings__sometimes">
+    <strong>Sometimes:</strong> Be notified whenever I post something new.
+  </label>
+  </div>
+
+  <div class="radio">
+  <input type="radio" id="settings__rarely" name="mailing_list" value="2"
+    {% if current_user.is_subscriber and current_user.mailing_list_id == 2 %}
+      checked
+    {% endif %}
+  />
+  <label for="settings__rarely">
+    <strong>Rarely:</strong> Only receive an email when I have a big update.
+  </label>
+  </div>
+
+  <div class="radio">
+  <input type="radio" id="settings__never" name="mailing_list" value="0"
+    {% if not current_user.is_subscriber %}
+      checked
+    {% endif %}
+  />
+  <label for="settings__never">
+    <strong>Never:</strong> Unsubscribe from my mailing list.
+  </label>
+  </div>
+  <br />
+
+  {% set button_text = 'UPDATE' %}
+  {% include 'common/components/_button.html' %}
+</form>

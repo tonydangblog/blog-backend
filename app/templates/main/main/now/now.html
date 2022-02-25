@@ -1,0 +1,7 @@
+{% extends 'common/layouts/base/_base.html' %}
+
+{% block main %}
+  <script src="{{ static_file('dist/js/now.bundle.js') }}" type="module"></script>
+
+  {% include 'main/main/now/_now.md.html' %}
+{% endblock main %}

@@ -1,0 +1,16 @@
+{% extends 'common/layouts/base/_base.html' %}
+
+{% block main %}
+  <script src="{{ static_file('dist/js/posts.bundle.js') }}" type="module"></script>
+
+  <h1>Posts</h1>
+  {% include 'main/main/posts/_search-form.html' %}
+
+  {% set whoops_mixes = 'whoops--hidden' %}
+  {% set whoops_message = "Can't find any posts..." %}
+  {% include 'common/components/_whoops.html' %}
+
+  <div id="blog-posts" data-posts="{{ blog_posts }}">
+    {% include 'common/components/_loading-bars.html' %}
+  </div>
+{% endblock main %}

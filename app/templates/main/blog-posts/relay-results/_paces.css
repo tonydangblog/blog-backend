@@ -1,0 +1,7 @@
+.relay-results__paces-chart__bar {
+  fill: var(--blue);
+}
+
+.relay-results__paces-chart__bar:hover {
+  fill: var(--highlight);
+}

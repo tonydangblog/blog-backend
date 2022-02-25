@@ -1,0 +1,8 @@
+{% block jinja %}{% endblock jinja %}
+
+<p>
+  Filters: <a href="{{ url_for(request.endpoint) }}">all</a>
+  {% for i in filters %}
+  | <a href="{{ url_for(request.endpoint, filtered=loop.index0) }}">{{ i[0] }}</a>
+  {% endfor %}
+</p>

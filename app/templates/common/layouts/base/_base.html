@@ -1,0 +1,23 @@
+{% block jinja %}{% endblock jinja %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ static_file('dist/css/base.bundle.css') }}">
+    {% include 'common/layouts/base/_scripts.html' %}
+    {% include 'common/layouts/base/_favicon.html' %}
+    {% include 'common/layouts/base/_meta.html' %}
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+    {% include 'common/layouts/base/_noscript.html' %}
+    {% include 'common/layouts/base/_flash-messages.html' %}
+    {% include 'common/layouts/base/_site-header.html' %}
+    {% include 'common/layouts/base/_site-side-menu.html' %}
+    <main class="{{ main_class }}">{% block main required %}{% endblock main %}</main>
+    {% if page['has_footer'] %}
+      {% include 'common/layouts/base/_site-footer.html' %}
+    {% endif %}
+  </body>
+</html>

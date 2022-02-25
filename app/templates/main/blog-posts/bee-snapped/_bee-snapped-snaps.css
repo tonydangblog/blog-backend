@@ -1,0 +1,17 @@
+.bee-snapped-snaps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bee-snapped-snaps a {
+  max-width: 49%;
+}
+
+.bee-snapped-snaps a img {
+  transition: 250ms;
+}
+
+.bee-snapped-snaps a img:hover {
+  transform: scale(1.01);
+}

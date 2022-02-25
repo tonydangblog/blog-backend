@@ -1,0 +1,44 @@
+{% block jinja %}{% endblock jinja %}
+
+<table>
+  <tbody>
+
+    <tr>
+      {% for column in columns %}
+        <th>
+          <a
+            class="a--invert"
+            href="{{ url_for(
+              request.endpoint,
+              filtered=request.args.get('filtered', ''),
+              order_by=column
+            ) }}"
+          >
+            {{ column }}
+          </a>
+        </th>
+      {% endfor %}
+
+      {% for action in actions %}
+        <th>{{ action }}</th>
+      {% endfor %}
+    </tr>
+
+    {% for row in rows %}
+      <tr>
+        {% for column in columns %}
+          <td>{{ row[column] }}</td>
+        {% endfor %}
+
+        {% for action in actions %}
+          {% if row['read_only'] %}
+            <td></td>
+          {% else %}
+            <td>{% include 'common/layouts/admin-list-view/_action-form.html' %}</td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    {% endfor %}
+
+  </tbody>
+</table>

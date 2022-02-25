@@ -1,0 +1,14 @@
+{% extends 'common/layouts/base/_base.html' %}
+
+{% block main %}
+  <script src="{{ static_file('dist/js/settings.bundle.js') }}" type="module"></script>
+
+  <h1>Hi {{ current_user.preferred_name }} &#x1F44B;</h1>
+  {% include 'account/settings/_info-update-form.html' %}
+  {% include 'common/components/_divider.html' %}
+  {% include 'account/settings/_email-frequency-form.html' %}
+  {% include 'common/components/_divider.html' %}
+  {% include 'account/settings/_delete-form.html' %}
+  {% include 'common/components/_divider.html' %}
+  {% include 'common/components/_return-home-link.html' %}
+{% endblock main %}

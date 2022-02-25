@@ -1,0 +1,18 @@
+.relay-run-form input[type='date'] {
+  width: 261px;
+  padding: 10px 7px;
+}
+
+.relay-run-form select {
+  width: 275px;
+  padding: 10px 6px;
+}
+
+.relay-run-form input {
+  width: 255px;
+}
+
+.relay-run-form textarea {
+  width: 90%;
+  height: 120px;
+}

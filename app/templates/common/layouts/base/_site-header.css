@@ -1,0 +1,54 @@
+.site-header {
+  display: flex;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.site-header__hamburger-button {
+  display: none;
+}
+
+.site-header__logo {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.site-header__logo:hover {
+  color: var(--text);
+}
+
+.site-header__navigation {
+  margin-left: 15px;
+}
+
+.site-header__endpoints {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.site-header__endpoint {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .site-header__hamburger-button {
+    display: inline-block;
+  }
+
+  .site-header__logo {
+    margin-left: 10px;
+  }
+
+  .site-header__navigation {
+    display: none;
+  }
+}
+
+.site-header__dark-mode-toggle {
+  position: absolute;
+  right: 0;
+}

@@ -1,0 +1,31 @@
+{% block jinja %}{% endblock jinja %}
+
+<form
+  class="mailer__mail-form"
+  method="POST"
+  action="{{ url_for('mailer.index') }}"
+  autocomplete="off"
+>
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+  <select name="mailing_list_id" required>
+    <option value="" disabled selected>mailing_list</option>
+    {% for mailing_list in mailing_lists %}
+      <option
+        value="{{ mailing_list['mailing_list_id'] }}"
+        {% if mailing_list['mailing_list'] == 'test' %}
+          selected
+        {% endif %}
+      >
+        {{ mailing_list['mailing_list'] }}
+      </option>
+    {% endfor %}
+  </select>
+  <br />
+
+  <input type="text" name="confirmation" required />
+  <br />
+  <br />
+
+  <button>SEND</button>
+</form>

@@ -1,0 +1,10 @@
+Hi {{ preferred_name }} -
+{% block main required %}{% endblock main %}
+--
+Tony Dang
+What I'm up to now: {{ url_for('main.now', _external=True) }}
+{% if unsubscribe_link %}
+Unsubscribe: {{ unsubscribe_link }}
+
+Update your settings: {{ url_for('account.settings', _external=True) }}
+{% endif %}

@@ -1,0 +1,6 @@
+{
+  "name": "backend",
+  "devDependencies": {
+    "prettier": "^2.3.1"
+  }
+}

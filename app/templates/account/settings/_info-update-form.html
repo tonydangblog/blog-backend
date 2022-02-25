@@ -1,0 +1,31 @@
+<form id="info-update-form" autocomplete="off">
+  <h2>Update your info.</h2>
+  <p><strong>Email:</strong> {{ current_user.email }}</p>
+
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+  <label for="info-update-form__name">What is your name? *</label><br />
+  <input
+    id="info-update-form__name"
+    type="text"
+    name="name"
+    maxlength="50"
+    placeholder="Name"
+    value="{{ current_user.name }}"
+    required
+  /><br /><br />
+
+  <label for="info-update-form__preferred-name"
+    >How would you like to be addressed?</label
+  ><br />
+  <input
+    id="info-update-form__preferred-name"
+    type="text"
+    name="preferred_name"
+    maxlength="50"
+    placeholder="Preferred name"
+    value="{{ current_user.preferred_name }}"
+  /><br /><br />
+
+  {% set button_text = 'SAVE' %} {% include 'common/components/_button.html' %}
+</form>

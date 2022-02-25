@@ -1,0 +1,31 @@
+{% block jinja %}{% endblock jinja %}
+
+<form id="subscription-form" class="subscription-form" autocomplete="on">
+  <p class="subscription-form__title">GET BLOG UPDATES &amp; ANNOUNCEMENTS</p>
+
+  <div class="subscription-form__inputs">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <input
+      class="subscription-form__name"
+      type="text"
+      placeholder="name"
+      name="name"
+      maxlength="50"
+      required
+    />
+    <input
+      class="subscription-form__email"
+      type="email"
+      placeholder="email"
+      name="email"
+      maxlength="256"
+      required
+    />
+
+    {% set button_mixes = 'subscription-form__button' %}
+    {% set button_text = 'SUBMIT' %}
+    {% include 'common/components/_button.html' %}
+  </div>
+
+  <div class="subscription-form__arrow">--&gt;</div>
+</form>

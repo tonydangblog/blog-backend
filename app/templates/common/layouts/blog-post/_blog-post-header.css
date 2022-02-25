@@ -1,0 +1,10 @@
+.blog-post-header__heading {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.blog-post-header__date {
+  text-align: center;
+  margin-top: 0;
+  font-size: 0.9em;
+}

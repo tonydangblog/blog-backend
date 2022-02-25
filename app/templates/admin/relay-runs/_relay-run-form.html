@@ -1,0 +1,49 @@
+{% block jinja %}{% endblock jinja %}
+
+<form
+  class="relay-run-form"
+  method="POST"
+  action="{{ url_for('admin.insert_relay_run') }}"
+  autocomplete="on"
+>
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  <input type="hidden" name="next_url" value="{{ request.full_path }}" />
+
+  <input type="date" name="run_date" required /><br />
+  <select name="relay_run_location_id" required>
+    <option value="" disabled selected>relay_run_location</option>
+    {% for location in data['locations'] %}
+      <option value="{{ location['relay_run_location_id'] }}">
+        {{ location['relay_run_location'] }}
+      </option>
+    {% endfor %}
+  </select><br />
+  <input
+    type="number"
+    placeholder="leg_distance"
+    name="leg_distance"
+    min="0.01"
+    max="999.99"
+    step="0.01"
+    required
+  /><br />
+  <select name="team" required>
+    <option value="" disabled selected>team</option>
+    {% for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' %}
+      <option value="{{ letter }}">{{ letter }}</option>
+    {% endfor %}
+  </select><br />
+  <input type="number" placeholder="position" name="position" min="1" required /><br />
+  <input type="text" placeholder="name" name="name" required /><br />
+  <input
+    type="text"
+    placeholder="hh:mm:ss"
+    name="time"
+    pattern="\d*:[0-5][0-9]:[0-5][0-9]\.?\d{0,6}"
+    value="00:"
+    required
+  /><br />
+  <textarea placeholder="notes" name="notes"></textarea><br />
+
+  <button>INSERT</button>
+</form>

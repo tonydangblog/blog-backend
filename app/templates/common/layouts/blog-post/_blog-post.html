@@ -1,0 +1,12 @@
+{% extends 'common/layouts/base/_base.html' %}
+
+{% block main %}
+
+  <article>
+    {% include 'common/layouts/blog-post/_blog-post-header.html' %}
+    {% block post_content required %}{% endblock post_content %}
+  </article>
+
+  {% include 'common/layouts/blog-post/_blog-post-nav.html' %}
+
+{% endblock main %}

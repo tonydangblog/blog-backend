@@ -1,0 +1,17 @@
+{% block jinja %}{% endblock jinja %}
+
+<div class="blog-post-nav">
+
+  {% if prev_post and prev_post['path']%}
+    <form method="GET" action="{{ prev_post['path'] }}">
+      <button>PREVIOUS</button>
+    </form>
+  {% endif %}
+
+  {% if next_post and next_post['path'] %}
+    <form method="GET" action="{{ next_post['path'] }}">
+      <button>NEXT</button>
+    </form>
+  {% endif %}
+
+</div>

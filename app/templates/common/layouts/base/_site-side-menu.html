@@ -1,0 +1,23 @@
+{% block jinja %}{% endblock jinja %}
+
+<div class="site-side-menu" style="display: none">
+  <ul class="site-side-menu__endpoints">
+    {% for endpoint in navigation_endpoints %}
+      <li>
+        <a class="a--hover-line" href="{{ url_for(endpoint[0]) }}">{{ endpoint[1] }}</a>
+      </li>
+    {% endfor %}
+    —
+    {% if current_user.is_authenticated %}
+      {% for endpoint in authenticated_endpoints %}
+        <li>
+          <a class="a--hover-line" href="{{ url_for(endpoint[0]) }}">
+            {{ endpoint[1] }}
+          </a>
+        </li>
+      {% endfor %}
+    {% else %}
+      <li><a class="a--hover-line" href="{{ url_for('auth.login') }}">login</a></li>
+    {% endif %}
+  </ul>
+</div>

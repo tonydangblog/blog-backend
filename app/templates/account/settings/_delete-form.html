@@ -1,0 +1,15 @@
+<form id="delete-form" autocomplete="off">
+  <h2>Delete account.</h2>
+  <p>If you wish to delete this account, enter your email here.</p>
+
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  <input
+    type="email"
+    name="email"
+    maxlength="256"
+    placeholder="Enter your email"
+    required
+  /><br /><br />
+
+  {% set button_text = 'DELETE' %} {% include 'common/components/_button.html' %}
+</form>

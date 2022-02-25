@@ -1,0 +1,8 @@
+.divider {
+  border: none;
+  width: 25px;
+  height: 1px;
+  margin: 40px 0px;
+  background: var(--heading);
+  transition: 250ms;
+}

@@ -1,0 +1,38 @@
+.toggle {
+  position: relative;
+  width: 49px;
+  height: 27px;
+}
+
+.toggle__checkbox {
+  visibility: hidden;
+}
+
+.toggle__label {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  width: 48px;
+  height: 26px;
+  border: 0.99px solid var(--heading);
+  transition: 250ms;
+}
+
+.toggle__label:hover {
+  background: var(--lightGray);
+}
+
+.toggle__label::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: '';
+  width: 22px;
+  height: 22px;
+  background: var(--heading);
+  transition: 250ms;
+}
+
+.toggle__checkbox:checked + .toggle__label::before {
+  transform: translateX(22px);
+}

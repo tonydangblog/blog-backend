@@ -1,0 +1,19 @@
+{% extends 'common/layouts/blog-post/_blog-post.html' %}
+
+{% block post_content %}
+  <script src="{{ static_file('dist/js/relayresults.bundle.js') }}" type="module">
+  </script>
+
+  <p>
+    Every now and then, I get together with a couple friends to do a friendly relay
+    race. Below is a visualization of the results and our performance over time, built
+    using the <a target="_blank" href="https://d3js.org/">D3.js library</a>.
+  </p>
+
+  {% include 'common/components/_divider.html' %}
+  {% include 'main/blog-posts/relay-results/_date-selection.html' %}
+  {% include 'main/blog-posts/relay-results/_results.html' %}
+  {% include 'main/blog-posts/relay-results/_paces.html' %}
+  {% include 'main/blog-posts/relay-results/_trends.html' %}
+  {% include 'main/blog-posts/relay-results/_notes.html' %}
+{% endblock post_content %}

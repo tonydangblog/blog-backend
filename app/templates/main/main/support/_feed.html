@@ -1,0 +1,10 @@
+<p>Thank you for all your support!</p>
+<p><strong>{{ total_coffees }}</strong> &times; &#x2615; received from...</p>
+<ul>
+  {% for donation in donations %}
+  <li>
+    <strong>{{ donation['display_name'] }}</strong> bought {{ int(donation['amount'] /
+    500) }} &times; &#x2615;
+  </li>
+  {% endfor %}
+</ul>
